@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t pankaj1203/Docker-react-app -f Dockerfile.dev .
 script:
-  - docker run  pankaj1203/Docker-react-app npm run test --coverag
+  - docker run  pankaj1203/Docker-react-app npm run test --coverage
