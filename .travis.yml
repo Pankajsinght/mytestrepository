@@ -1,7 +1,9 @@
-#sudo: required
+sudo: required
 services:
   - docker
 before_install:
+  - gem install bundler
   - docker build -t pankaj1203/mytestrepository -f Dockerfile.dev .
 script:
+  - bundle exec rake spec
   - docker run  pankaj1203/mytestrepository npm run test --coverage
